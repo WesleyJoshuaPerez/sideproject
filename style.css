@@ -37,7 +37,9 @@ video::-moz-media-controls {
   justify-content: center;
   align-items: center;
 }
-
+.hover-video {
+  cursor: pointer;
+}
 /* Responsive video */
 video {
   width: 12.5rem; /* Make video responsive */
