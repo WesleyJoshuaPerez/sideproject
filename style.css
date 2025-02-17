@@ -40,6 +40,7 @@ video::-moz-media-controls {
 .hover-video {
   cursor: pointer;
 }
+
 /* Responsive video */
 video {
   width: 12.5rem; /* Make video responsive */
