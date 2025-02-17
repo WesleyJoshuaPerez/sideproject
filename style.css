@@ -1,0 +1,59 @@
+body {
+  background-color: black;
+}
+header {
+  color: aliceblue;
+  font-family: "Sigmar", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.125rem;
+  text-align: center;
+}
+
+/* Optionally, hide the video controls entirely */
+video::-webkit-media-controls {
+  display: none !important; /* Hides controls in WebKit browsers (Chrome, Safari) */
+}
+video::-moz-media-controls {
+  display: none !important; /* Firefox */
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  gap: 0.3125rem; /* Space between videos */
+  justify-content: center;
+  align-items: center;
+  padding: 0.625rem;
+  margin: 1.25rem;
+}
+
+/* Center each video */
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive video */
+video {
+  width: 12.5rem; /* Make video responsive */
+  height: 100%; /* Maintain aspect ratio */
+}
+
+/* Media Query: 2 videos per row on medium screens */
+@media (max-width: 1024px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Media Query: 1 video per row on small screens */
+@media (max-width: 600px) {
+  .video-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
