@@ -1,4 +1,5 @@
 document.querySelectorAll(".hover-video").forEach((video) => {
+  // Mouse hover events
   video.addEventListener("mouseenter", () => {
     video.play();
   });
@@ -8,6 +9,17 @@ document.querySelectorAll(".hover-video").forEach((video) => {
     video.currentTime = 0; // Reset to the beginning
   });
 
+  // Touch events for mobile/touch devices
+  video.addEventListener("touchstart", () => {
+    video.play();
+  });
+
+  video.addEventListener("touchend", () => {
+    video.pause();
+    video.currentTime = 0; // Reset to the beginning
+  });
+
+  // Click event to toggle fullscreen mode
   video.addEventListener("click", () => {
     if (!document.fullscreenElement) {
       // If not in fullscreen, request fullscreen
